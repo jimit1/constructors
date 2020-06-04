@@ -5,7 +5,7 @@ class Word {
   get getWord() {
     return this.word;
   }
-  setWord(wrd) {
+  set setWord(wrd) {
     this.word = wrd;
   }
 }
