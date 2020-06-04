@@ -14,9 +14,10 @@ describe("Word", () => {
     });
   });
   describe("setWord", () => {
-    it("Should set word", () => {
+    it("Should set the word to the argument that was passed", () => {
       const testWord = new Word("test");
-      expect(testWord.setWord()).toEqual("test");
+      testWord.setWord("things");
+      expect(testWord).toEqual({ word: "things" });
     });
   });
 });
