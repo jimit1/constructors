@@ -11,24 +11,20 @@ class Word {
     return new Word(this.word.toUpperCase());
   }
 
+  get low() {
+    return new Word(this.word.toLowerCase());
+  }
+
   get getWord() {
     return this.word;
   }
   set setWord(wrd) {
     this.word = wrd;
   }
+
+  get isPal() {
+    return this.word.split("").reverse().join("") === this.word;
+  }
 }
-
-// function Word(wrd) {
-//   this.word = wrd;
-// }
-
-// Word.prototype.getWord = function () {
-//   return this.word;
-// };
-
-// const specialWord = new Word("hello");
-
-// console.log(specialWord);
 
 module.exports = Word;

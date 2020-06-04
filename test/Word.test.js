@@ -28,8 +28,25 @@ describe("Word", () => {
   });
   describe("cap", () => {
     it("Should return a new object with the capitalized word", () => {
-      const testWord = new Word("capitalized");
-      expect(testWord.cap).toEqual({ word: "CAPITALIZED" });
+      const testWord = new Word("capitalized").cap;
+      expect(testWord).toEqual({ word: "CAPITALIZED" });
+    });
+  });
+
+  describe("low", () => {
+    it("Should return a new object with the capitalized word", () => {
+      const testWord = new Word("LOWERED").low;
+      expect(testWord).toEqual({ word: "lowered" });
+    });
+  });
+
+  describe("isPal", () => {
+    it("Should return true if palendrome, else false", () => {
+      const testWord = new Word("racecar").isPal;
+      const testWord2 = new Word("test").isPal;
+
+      expect(testWord).toBe(true);
+      expect(testWord2).toBe(false);
     });
   });
 });
