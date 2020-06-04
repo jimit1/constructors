@@ -20,4 +20,10 @@ describe("Word", () => {
       expect(testWord).toEqual({ word: "things" });
     });
   });
+  describe("rev", () => {
+    it("Should return a new object with the initial word reversed", () => {
+      const testWord = new Word("test");
+      expect(testWord.rev).toEqual({ word: "tset" });
+    });
+  });
 });
