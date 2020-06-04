@@ -1,7 +1,7 @@
 const Word = require("./util/Word");
 
-const funkyText = new Word("Thing");
+let funkyText = new Word("Thing").rev;
 
-const text = funkyText.getWord;
+funkyText = funkyText.rev;
 
-console.log(text);
+console.log(funkyText);

@@ -7,6 +7,10 @@ class Word {
     return new Word(this.word.split("").reverse().join(""));
   }
 
+  get cap() {
+    return new Word(this.word.toUpperCase());
+  }
+
   get getWord() {
     return this.word;
   }

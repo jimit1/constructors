@@ -22,8 +22,14 @@ describe("Word", () => {
   });
   describe("rev", () => {
     it("Should return a new object with the initial word reversed", () => {
-      const testWord = new Word("test");
-      expect(testWord.rev).toEqual({ word: "tset" });
+      const testWord = new Word("reverse");
+      expect(testWord.rev).toEqual({ word: "esrever" });
+    });
+  });
+  describe("cap", () => {
+    it("Should return a new object with the capitalized word", () => {
+      const testWord = new Word("capitalized");
+      expect(testWord.cap).toEqual({ word: "CAPITALIZED" });
     });
   });
 });
